@@ -8,7 +8,12 @@ public class Order {
 
     private Long id;
     private LocalDate orderDate;
-    //w clinic musi sie zawierac jesden konkretny denstist
-    public Clinic clinic;
+    private LocalDate startDate;
+    private LocalDate endDate;
     private List<Product> productsList = new ArrayList<>();
+    private WorkStatus status;
+    private WorkType workType;
+    private User dentist;
+    private User technician;
+
 }
