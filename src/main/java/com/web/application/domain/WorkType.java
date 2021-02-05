@@ -1,8 +1,7 @@
 package com.web.application.domain;
 
-public class WorkType {
+public enum  WorkType {
 
-    private String haster;
-    private String normal;
+    HASTER, NORMAL
 
 }
