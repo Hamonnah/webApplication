@@ -41,14 +41,17 @@ public class Order {
     private WorkStatus status;
 
     @Column(name = "WORK_TYPE")
+    @Enumerated(EnumType.ORDINAL)
     private WorkType workType;
 
     @Column(name = "DENTIST")
     @Transient
+    @Enumerated(EnumType.ORDINAL)
     private User dentist;
 
     @Column(name = "TECHNICIAN")
     @Transient
+    @Enumerated(EnumType.ORDINAL)
     private User technician;
 
 }
