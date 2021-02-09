@@ -5,9 +5,10 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public class Product {
+public class Mail {
 
-    private Long id;
-    private String productName;
+    private String mailTo;
+    private String subject;
+    private String message;
 
 }
