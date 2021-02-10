@@ -18,11 +18,9 @@ public class User {
     @Id
     @GeneratedValue
     @Column(name = "USER_ID", unique = true)
-    private Long id;
+    private int id;
 
     @Column(name = "USER_NAME")
     private String name;
 
-    @Column(name = "USER_TYPE")
-    private UserType userType;
 }

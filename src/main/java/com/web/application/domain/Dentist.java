@@ -1,5 +1,6 @@
 package com.web.application.domain;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,15 +13,15 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "PRODUCTS")
-public class Product {
+@Table(name = "DENTISTS")
+public class Dentist {
 
     @Id
     @GeneratedValue
-    @Column(name = "PRODUCT_ID", unique = true)
+    @Column(name = "DENTIST_ID", unique = true)
     private int id;
 
-    @Column(name = "PRODUCT_NAME")
-    private String productName;
+    @Column(name = "DENTIST_NAME")
+    private String name;
 
 }

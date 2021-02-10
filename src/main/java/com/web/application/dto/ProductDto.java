@@ -1,4 +1,4 @@
-package com.web.application.domain;
+package com.web.application.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,16 +11,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity
-@Table(name = "PRODUCTS")
-public class Product {
+public class ProductDto {
 
-    @Id
-    @GeneratedValue
-    @Column(name = "PRODUCT_ID", unique = true)
     private int id;
-
-    @Column(name = "PRODUCT_NAME")
     private String productName;
 
 }

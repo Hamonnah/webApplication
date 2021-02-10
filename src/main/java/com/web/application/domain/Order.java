@@ -18,14 +18,14 @@ import java.util.List;
 @Table(name = "ORDERS")
 public class Order {
 
-    public Order(Long id) {
+    public Order(int id) {
         this.id = id;
     }
 
     @Id
     @GeneratedValue
     @Column(name = "ORDER_ID", unique = true)
-    private Long id;
+    private int id;
 
     @Column(name = "DATE_IN")
     private LocalDate dateIn;
@@ -38,6 +38,7 @@ public class Order {
     private List<Product> productsList = new ArrayList<>();
 
     @Column(name = "WORK_STATUS")
+    @Enumerated(EnumType.ORDINAL)
     private WorkStatus status;
 
     @Column(name = "WORK_TYPE")
@@ -46,12 +47,10 @@ public class Order {
 
     @Column(name = "DENTIST")
     @Transient
-    @Enumerated(EnumType.ORDINAL)
-    private User dentist;
+    private Dentist dentist;
 
     @Column(name = "TECHNICIAN")
     @Transient
-    @Enumerated(EnumType.ORDINAL)
-    private User technician;
+    private User user;
 
 }
