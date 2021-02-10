@@ -27,4 +27,6 @@ public class OrderDto {
     private User user;
     private Dentist dentist;
 
+    public OrderDto(int id, LocalDate dateIn, UserDto mapUserToUserDto, List<ProductDto> mapToProductDtoList) {
+    }
 }

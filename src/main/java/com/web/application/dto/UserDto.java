@@ -14,4 +14,7 @@ public class UserDto {
     private int id;
     private String name;
 
+    public UserDto(String name) {
+        this.name = name;
+    }
 }

@@ -15,6 +15,10 @@ import javax.persistence.*;
 @Table(name = "PRODUCTS")
 public class Product {
 
+    public Product(String productName) {
+        this.productName = productName;
+    }
+
     @Id
     @GeneratedValue
     @Column(name = "PRODUCT_ID", unique = true)
