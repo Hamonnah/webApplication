@@ -16,10 +16,13 @@ public interface ProductDAO extends CrudRepository<Product, Integer> {
     @Override
     List<Product> findAll();
 
-    //@Override
-    Optional<Product> findById(int productId);
+    @Override
+    Optional<Product> findById(Integer productId);
 
     @Override
     Product save(Product product);
+
+    @Override
+    void deleteById(Integer productId);
 
 }

@@ -25,4 +25,8 @@ public class ProductDbService {
         return productDao.save(product);
     }
 
+    public void deleteProduct(Long productId) {
+
+    }
+
 }

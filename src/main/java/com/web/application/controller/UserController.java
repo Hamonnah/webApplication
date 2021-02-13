@@ -1,6 +1,5 @@
 package com.web.application.controller;
 
-
 import com.web.application.dto.UserDto;
 import com.web.application.mapper.UserMapper;
 import com.web.application.service.UserDbService;
@@ -8,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -23,7 +21,7 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.GET, value = "getUsers")
     public List<UserDto> getUsers() {
-        return new ArrayList<>();
+        return userMapper.mapToUserDtoList(service.getAllUsers());
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "getUser")
